@@ -22,6 +22,8 @@
 
 @property (readonly) float bmr;
 
+@property BOOL imperial;
+
 
 +(EMMPatient*)thePatient;
 -(float)bmi;

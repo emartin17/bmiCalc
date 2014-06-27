@@ -5,13 +5,15 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3EA9E07E-1B89-4BAB-B218-529FB3400A66</string>
+	<string>587BF5B5-0055-41EA-8DBF-1287A0772EA4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>bmiCalc</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1B86164B-E6C3-4272-9A76-E5C8B0E822BA</key>
 		<string>https://github.com/mshafae/SCEHR-iOS.git</string>
+		<key>8ABA9188-4F65-41A7-9BF7-F44B2BD98EBA</key>
+		<string>https://github.com/emartin17/bmiCalc.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>bmiCalc/bmiCalc.xcodeproj/project.xcworkspace</string>
@@ -19,15 +21,25 @@
 	<dict>
 		<key>1B86164B-E6C3-4272-9A76-E5C8B0E822BA</key>
 		<string>../../..</string>
+		<key>8ABA9188-4F65-41A7-9BF7-F44B2BD98EBA</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mshafae/SCEHR-iOS.git</string>
+	<string>https://github.com/emartin17/bmiCalc.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>1B86164B-E6C3-4272-9A76-E5C8B0E822BA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8ABA9188-4F65-41A7-9BF7-F44B2BD98EBA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bmiCalc</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

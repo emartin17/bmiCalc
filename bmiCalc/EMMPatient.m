@@ -10,11 +10,11 @@
 
 EMMPatient* SecretPatient;
 
-#define male YES
-#define female NO
+//#define Male YES
+//#define Female NO
 
 @implementation EMMPatient
-@synthesize height,weight,age,gender;
+@synthesize height,weight,age,gender,imperial;
 +(EMMPatient *)thePatient
 {
     if(SecretPatient == nil)
@@ -27,27 +27,42 @@ EMMPatient* SecretPatient;
 {
     float _height = [height floatValue];
     float _weight = [weight floatValue];
-    return _weight/(_height*_height);
+    if(!imperial)
+    {
+        return _weight/(_height*_height);
+    }
+    else
+    {
+        return (_weight/(_height*_height)) * 703 ;
+    }
 }
 
 -(float)bmr
 {
-    if (gender == male)
+    float _height = [height floatValue];
+    float _weight = [weight floatValue];
+    int _age = [age intValue];
+    if(!imperial)
     {
-        
-        float _height = [height floatValue];
-        float _weight = [weight floatValue];
-        int _age = [age intValue];
-        NSLog(@"%g,%g,%d",_height,_weight,_age);
-        return 66.0 + 13.7*_weight + 500.0*_height - 6.8*_age;
+        if (gender == YES)
+        {
+            return 66.0 + 13.7*_weight + 500.0*_height - 6.8*_age;
+        }
+        else
+        {
+            return 655 + 9.6*_weight + 0.018*_height - 4.7*_age;
+        }
     }
     else
     {
-        NSLog(@"FEMALE");
-        float _height = [height floatValue];
-        float _weight = [weight floatValue];
-        int _age = [age intValue];
-        return 655 + 9.6*_weight + 0.018*_height - 4.7*_age;
+        if (gender == YES)
+        {
+            return 66 + 6.23*_weight + 152.4*_height - 6.8*_age;
+        }
+        else
+        {
+            return 655 + 4.35*_weight + 56.4*_height - 4.7*_age;
+        }
     }
 }
 

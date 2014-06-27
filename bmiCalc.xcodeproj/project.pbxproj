@@ -14,7 +14,6 @@
 		88980FCB195B119600389901 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88980FCA195B119600389901 /* main.m */; };
 		88980FCF195B119600389901 /* EMMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88980FCE195B119600389901 /* EMMAppDelegate.m */; };
 		88980FD2195B119600389901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88980FD0195B119600389901 /* Main.storyboard */; };
-		88980FD5195B119600389901 /* EMMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88980FD4195B119600389901 /* EMMViewController.m */; };
 		88980FD7195B119600389901 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88980FD6195B119600389901 /* Images.xcassets */; };
 		88980FDE195B119700389901 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88980FDD195B119700389901 /* XCTest.framework */; };
 		88980FDF195B119700389901 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88980FBE195B119600389901 /* Foundation.framework */; };
@@ -24,6 +23,8 @@
 		88980FF5195B126700389901 /* EMMPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = 88980FF4195B126700389901 /* EMMPatient.m */; };
 		88EA4668195C635000A9F687 /* progBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EA4666195C635000A9F687 /* progBar.png */; };
 		88EA4669195C635000A9F687 /* trackBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EA4667195C635000A9F687 /* trackBar@2x.png */; };
+		88F9FABE195DAC1100AF7A4C /* BMICalcIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F9FABD195DAC1100AF7A4C /* BMICalcIcon.png */; };
+		88FBCFB2195C878400B1A9C5 /* EMMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FBCFB1195C878400B1A9C5 /* EMMTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,6 @@
 		88980FCD195B119600389901 /* EMMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMMAppDelegate.h; sourceTree = "<group>"; };
 		88980FCE195B119600389901 /* EMMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMMAppDelegate.m; sourceTree = "<group>"; };
 		88980FD1195B119600389901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		88980FD3195B119600389901 /* EMMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMMViewController.h; sourceTree = "<group>"; };
-		88980FD4195B119600389901 /* EMMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EMMViewController.m; sourceTree = "<group>"; };
 		88980FD6195B119600389901 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		88980FDC195B119700389901 /* bmiCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bmiCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88980FDD195B119700389901 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -60,6 +59,10 @@
 		88980FF4195B126700389901 /* EMMPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMPatient.m; sourceTree = "<group>"; };
 		88EA4666195C635000A9F687 /* progBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = progBar.png; path = ../../../../progBar.png; sourceTree = "<group>"; };
 		88EA4667195C635000A9F687 /* trackBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trackBar@2x.png"; path = "../../../../trackBar@2x.png"; sourceTree = "<group>"; };
+		88F9FABD195DAC1100AF7A4C /* BMICalcIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMICalcIcon.png; sourceTree = "<group>"; };
+		88F9FABF195DAC5200AF7A4C /* BMICalcIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMICalcIcon.png; sourceTree = "<group>"; };
+		88FBCFB0195C878400B1A9C5 /* EMMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMTableViewController.h; sourceTree = "<group>"; };
+		88FBCFB1195C878400B1A9C5 /* EMMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 				88980FE3195B119700389901 /* bmiCalcTests */,
 				88980FBD195B119600389901 /* Frameworks */,
 				88980FBC195B119600389901 /* Products */,
+				88F9FABF195DAC5200AF7A4C /* BMICalcIcon.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,8 +126,9 @@
 				88980FCD195B119600389901 /* EMMAppDelegate.h */,
 				88980FCE195B119600389901 /* EMMAppDelegate.m */,
 				88980FD0195B119600389901 /* Main.storyboard */,
-				88980FD3195B119600389901 /* EMMViewController.h */,
-				88980FD4195B119600389901 /* EMMViewController.m */,
+				88FBCFB0195C878400B1A9C5 /* EMMTableViewController.h */,
+				88FBCFB1195C878400B1A9C5 /* EMMTableViewController.m */,
+				88F9FABD195DAC1100AF7A4C /* BMICalcIcon.png */,
 				88980FF3195B126700389901 /* EMMPatient.h */,
 				88980FF4195B126700389901 /* EMMPatient.m */,
 				88980FD6195B119600389901 /* Images.xcassets */,
@@ -242,6 +247,7 @@
 			files = (
 				88980FD7195B119600389901 /* Images.xcassets in Resources */,
 				88980FC9195B119600389901 /* InfoPlist.strings in Resources */,
+				88F9FABE195DAC1100AF7A4C /* BMICalcIcon.png in Resources */,
 				88980FD2195B119600389901 /* Main.storyboard in Resources */,
 				88EA4668195C635000A9F687 /* progBar.png in Resources */,
 				88EA4669195C635000A9F687 /* trackBar@2x.png in Resources */,
@@ -263,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88980FD5195B119600389901 /* EMMViewController.m in Sources */,
+				88FBCFB2195C878400B1A9C5 /* EMMTableViewController.m in Sources */,
 				88980FCF195B119600389901 /* EMMAppDelegate.m in Sources */,
 				88980FCB195B119600389901 /* main.m in Sources */,
 				88980FF5195B126700389901 /* EMMPatient.m in Sources */,
