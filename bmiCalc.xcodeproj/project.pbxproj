@@ -21,10 +21,10 @@
 		88980FE8195B119700389901 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88980FE6195B119700389901 /* InfoPlist.strings */; };
 		88980FEA195B119700389901 /* bmiCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88980FE9195B119700389901 /* bmiCalcTests.m */; };
 		88980FF5195B126700389901 /* EMMPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = 88980FF4195B126700389901 /* EMMPatient.m */; };
-		88EA4668195C635000A9F687 /* progBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EA4666195C635000A9F687 /* progBar.png */; };
-		88EA4669195C635000A9F687 /* trackBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EA4667195C635000A9F687 /* trackBar@2x.png */; };
-		88F9FABE195DAC1100AF7A4C /* BMICalcIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F9FABD195DAC1100AF7A4C /* BMICalcIcon.png */; };
+		88EBA72B195DC3EF006223B5 /* StaticDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EBA72A195DC3EF006223B5 /* StaticDataTableViewController.m */; };
 		88FBCFB2195C878400B1A9C5 /* EMMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FBCFB1195C878400B1A9C5 /* EMMTableViewController.m */; };
+		88FCDB2B196ED759001862BF /* UIButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FCDB2A196ED759001862BF /* UIButtonBarArrowLeft@2x.png */; };
+		88FF07E3196B166400D06844 /* TextFIeldNoCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FF07E2196B166400D06844 /* TextFIeldNoCursor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +57,13 @@
 		88980FE9195B119700389901 /* bmiCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bmiCalcTests.m; sourceTree = "<group>"; };
 		88980FF3195B126700389901 /* EMMPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMPatient.h; sourceTree = "<group>"; };
 		88980FF4195B126700389901 /* EMMPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMPatient.m; sourceTree = "<group>"; };
-		88EA4666195C635000A9F687 /* progBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = progBar.png; path = ../../../../progBar.png; sourceTree = "<group>"; };
-		88EA4667195C635000A9F687 /* trackBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trackBar@2x.png"; path = "../../../../trackBar@2x.png"; sourceTree = "<group>"; };
-		88F9FABD195DAC1100AF7A4C /* BMICalcIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMICalcIcon.png; sourceTree = "<group>"; };
-		88F9FABF195DAC5200AF7A4C /* BMICalcIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BMICalcIcon.png; sourceTree = "<group>"; };
+		88EBA729195DC3EF006223B5 /* StaticDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticDataTableViewController.h; sourceTree = "<group>"; };
+		88EBA72A195DC3EF006223B5 /* StaticDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticDataTableViewController.m; sourceTree = "<group>"; };
 		88FBCFB0195C878400B1A9C5 /* EMMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMTableViewController.h; sourceTree = "<group>"; };
 		88FBCFB1195C878400B1A9C5 /* EMMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMTableViewController.m; sourceTree = "<group>"; };
+		88FCDB2A196ED759001862BF /* UIButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
+		88FF07E1196B166400D06844 /* TextFIeldNoCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFIeldNoCursor.h; path = ../TextFIeldNoCursor.h; sourceTree = "<group>"; };
+		88FF07E2196B166400D06844 /* TextFIeldNoCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFIeldNoCursor.m; path = ../TextFIeldNoCursor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +97,6 @@
 				88980FE3195B119700389901 /* bmiCalcTests */,
 				88980FBD195B119600389901 /* Frameworks */,
 				88980FBC195B119600389901 /* Products */,
-				88F9FABF195DAC5200AF7A4C /* BMICalcIcon.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,12 +123,15 @@
 		88980FC4195B119600389901 /* bmiCalc */ = {
 			isa = PBXGroup;
 			children = (
+				88FF07E1196B166400D06844 /* TextFIeldNoCursor.h */,
+				88FF07E2196B166400D06844 /* TextFIeldNoCursor.m */,
 				88980FCD195B119600389901 /* EMMAppDelegate.h */,
 				88980FCE195B119600389901 /* EMMAppDelegate.m */,
 				88980FD0195B119600389901 /* Main.storyboard */,
+				88EBA729195DC3EF006223B5 /* StaticDataTableViewController.h */,
+				88EBA72A195DC3EF006223B5 /* StaticDataTableViewController.m */,
 				88FBCFB0195C878400B1A9C5 /* EMMTableViewController.h */,
 				88FBCFB1195C878400B1A9C5 /* EMMTableViewController.m */,
-				88F9FABD195DAC1100AF7A4C /* BMICalcIcon.png */,
 				88980FF3195B126700389901 /* EMMPatient.h */,
 				88980FF4195B126700389901 /* EMMPatient.m */,
 				88980FD6195B119600389901 /* Images.xcassets */,
@@ -140,8 +143,7 @@
 		88980FC5195B119600389901 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				88EA4666195C635000A9F687 /* progBar.png */,
-				88EA4667195C635000A9F687 /* trackBar@2x.png */,
+				88FCDB2A196ED759001862BF /* UIButtonBarArrowLeft@2x.png */,
 				88980FC6195B119600389901 /* bmiCalc-Info.plist */,
 				88980FC7195B119600389901 /* InfoPlist.strings */,
 				88980FCA195B119600389901 /* main.m */,
@@ -216,6 +218,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Martin Developments";
 				TargetAttributes = {
+					88980FBA195B119600389901 = {
+						DevelopmentTeam = RFF9P379Y9;
+					};
 					88980FDB195B119700389901 = {
 						TestTargetID = 88980FBA195B119600389901;
 					};
@@ -246,11 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88980FD7195B119600389901 /* Images.xcassets in Resources */,
+				88FCDB2B196ED759001862BF /* UIButtonBarArrowLeft@2x.png in Resources */,
 				88980FC9195B119600389901 /* InfoPlist.strings in Resources */,
-				88F9FABE195DAC1100AF7A4C /* BMICalcIcon.png in Resources */,
 				88980FD2195B119600389901 /* Main.storyboard in Resources */,
-				88EA4668195C635000A9F687 /* progBar.png in Resources */,
-				88EA4669195C635000A9F687 /* trackBar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FF07E3196B166400D06844 /* TextFIeldNoCursor.m in Sources */,
+				88EBA72B195DC3EF006223B5 /* StaticDataTableViewController.m in Sources */,
 				88FBCFB2195C878400B1A9C5 /* EMMTableViewController.m in Sources */,
 				88980FCF195B119600389901 /* EMMAppDelegate.m in Sources */,
 				88980FCB195B119600389901 /* main.m in Sources */,
@@ -397,10 +402,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bmiCalc/bmiCalc-Prefix.pch";
 				INFOPLIST_FILE = "bmiCalc/bmiCalc-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,10 +418,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bmiCalc/bmiCalc-Prefix.pch";
 				INFOPLIST_FILE = "bmiCalc/bmiCalc-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

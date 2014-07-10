@@ -23,17 +23,24 @@ EMMPatient* SecretPatient;
     }
     return SecretPatient;
 }
+
+-(float)customRounding:(float)value {
+    const float roundingValue = 0.01;
+    int mulitpler = floor(value / roundingValue);
+    return mulitpler * roundingValue;
+}
+
 -(float)bmi
 {
     float _height = [height floatValue];
     float _weight = [weight floatValue];
     if(!imperial)
     {
-        return _weight/(_height*_height);
+        return [self customRounding:_weight/(_height*_height)];
     }
     else
     {
-        return (_weight/(_height*_height)) * 703 ;
+        return [self customRounding:(_weight/(_height*_height)) * 703];
     }
 }
 
@@ -46,22 +53,22 @@ EMMPatient* SecretPatient;
     {
         if (gender == YES)
         {
-            return 66.0 + 13.7*_weight + 500.0*_height - 6.8*_age;
+            return [self customRounding:66.0 + 13.7*_weight + 500.0*_height - 6.8*_age];
         }
         else
         {
-            return 655 + 9.6*_weight + 0.018*_height - 4.7*_age;
+            return [self customRounding:655 + 9.6*_weight + 0.018*_height - 4.7*_age];
         }
     }
     else
     {
         if (gender == YES)
         {
-            return 66 + 6.23*_weight + 152.4*_height - 6.8*_age;
+            return [self customRounding:66 + 6.23*_weight + 12.7*_height - 6.8*_age];
         }
         else
         {
-            return 655 + 4.35*_weight + 56.4*_height - 4.7*_age;
+            return [self customRounding:655 + 4.35*_weight + 56.4*_height - 4.7*_age];
         }
     }
 }
