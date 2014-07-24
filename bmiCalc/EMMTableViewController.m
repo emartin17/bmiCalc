@@ -27,6 +27,7 @@
         // Custom initialization
     }
     return self;
+    NSLog(@"HI");
 }
 
 -(void)viewDidLoad
