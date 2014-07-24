@@ -24,6 +24,7 @@
 		88EBA72B195DC3EF006223B5 /* StaticDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EBA72A195DC3EF006223B5 /* StaticDataTableViewController.m */; };
 		88FBCFB2195C878400B1A9C5 /* EMMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FBCFB1195C878400B1A9C5 /* EMMTableViewController.m */; };
 		88FCDB2B196ED759001862BF /* UIButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FCDB2A196ED759001862BF /* UIButtonBarArrowLeft@2x.png */; };
+		88FCDB2D196F034C001862BF /* UIButtonBarArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FCDB2C196F034C001862BF /* UIButtonBarArrowRight@2x.png */; };
 		88FF07E3196B166400D06844 /* TextFIeldNoCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FF07E2196B166400D06844 /* TextFIeldNoCursor.m */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		88FBCFB0195C878400B1A9C5 /* EMMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMTableViewController.h; sourceTree = "<group>"; };
 		88FBCFB1195C878400B1A9C5 /* EMMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMTableViewController.m; sourceTree = "<group>"; };
 		88FCDB2A196ED759001862BF /* UIButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
+		88FCDB2C196F034C001862BF /* UIButtonBarArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarArrowRight@2x.png"; sourceTree = "<group>"; };
 		88FF07E1196B166400D06844 /* TextFIeldNoCursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFIeldNoCursor.h; path = ../TextFIeldNoCursor.h; sourceTree = "<group>"; };
 		88FF07E2196B166400D06844 /* TextFIeldNoCursor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFIeldNoCursor.m; path = ../TextFIeldNoCursor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 		88980FC5195B119600389901 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88FCDB2C196F034C001862BF /* UIButtonBarArrowRight@2x.png */,
 				88FCDB2A196ED759001862BF /* UIButtonBarArrowLeft@2x.png */,
 				88980FC6195B119600389901 /* bmiCalc-Info.plist */,
 				88980FC7195B119600389901 /* InfoPlist.strings */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88980FD7195B119600389901 /* Images.xcassets in Resources */,
+				88FCDB2D196F034C001862BF /* UIButtonBarArrowRight@2x.png in Resources */,
 				88FCDB2B196ED759001862BF /* UIButtonBarArrowLeft@2x.png in Resources */,
 				88980FC9195B119600389901 /* InfoPlist.strings in Resources */,
 				88980FD2195B119600389901 /* Main.storyboard in Resources */,
@@ -407,6 +411,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bmiCalc/bmiCalc-Prefix.pch";
 				INFOPLIST_FILE = "bmiCalc/bmiCalc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -423,6 +428,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bmiCalc/bmiCalc-Prefix.pch";
 				INFOPLIST_FILE = "bmiCalc/bmiCalc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

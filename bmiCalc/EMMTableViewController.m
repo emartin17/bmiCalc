@@ -49,10 +49,19 @@
     genderArray = @[@"Male", @"Female"];
     
     //picker exists in the view, but is outside visible range
-    UIPickerView *picker = [[UIPickerView alloc] init];
-    picker.delegate = self;
-    picker.dataSource = self;
-    genderField.inputView = picker;
+    UIPickerView *genderPicker = [[UIPickerView alloc] init];
+    genderPicker.delegate = self;
+    genderPicker.dataSource = self;
+    
+    UIPickerView *activityLevelPicker = [[UIPickerView alloc] init];
+    activityLevelPicker.delegate = self;
+    activityLevelPicker.dataSource = self;
+    
+    UIPickerView *targetPicker = [[UIPickerView alloc] init];
+    targetPicker.delegate = self;
+    targetPicker.dataSource = self;
+    
+    genderField.inputView = genderPicker;
     
     [weightField addTarget:self
                     action:@selector(checkBoth)
@@ -87,7 +96,7 @@
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    UIToolbar *toolbar = [self createInputAccessoryView];
+    UIToolbar *toolbar = [self createInputAccessoryViewForTextField:textField];
     [toolbar sizeToFit];
     [textField setInputAccessoryView: toolbar];
     
@@ -96,6 +105,7 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    
     if([genderField isFirstResponder] && [genderField.text isEqualToString:@""])
     {
         genderField.text = @"Male";
@@ -124,10 +134,42 @@
         [patient setHeight:[NSNumber numberWithFloat:[heightField.text floatValue]]];
         [patient setWeight:[NSNumber numberWithFloat:[weightField.text floatValue]]];
     }
-    float progessbar = [patient bmi];
-    progessbar = progessbar - 15;
-    progessbar = progessbar/15;
-    [bmiScale setProgress:progessbar animated:YES];
+    float progressbar = [patient bmi];
+    progressbar = (progressbar-10)/40;
+    NSLog(@"%f",progressbar);
+    if(progressbar < 0.0)
+    {
+        [bmiScale setProgress:0.0 animated:YES];
+    }
+    else if(progressbar > 1.0)
+    {
+        [bmiScale setProgress:1.0 animated:YES];
+    }
+    else
+    {
+        [bmiScale setProgress:progressbar animated:YES];
+    }
+    
+    if([patient bmi] < 16.0)
+    {
+        bmiInfo.text = @"Severly Underweight";
+    }
+    else if (16.0 < [patient bmi] < 18.5)
+    {
+        bmiInfo.text = @"Underweight";
+    }
+    else if (18.25 < [patient bmi] < 25)
+    {
+        bmiInfo.text = @"Normal Weight";
+    }
+    else if (25 < [patient bmi] < 30)
+    {
+        bmiInfo.text = @"Overweight";
+    }
+    else if (30 < [patient bmi])
+    {
+        bmiInfo.text = @"Obese";
+    }
     
     [UIView transitionWithView:bmiLabel duration:0.6 options:UIViewAnimationOptionTransitionCrossDissolve animations:NULL completion:NULL];
     bmiLabel.hidden = NO;
@@ -160,7 +202,15 @@
     float progressbar = [patient bmr];
     progressbar = progressbar - 800;
     progressbar = progressbar/2200;
-    [bmrScale setProgress:progressbar animated:YES];
+    if(progressbar < 0)
+    {
+        [bmrScale setProgress:0.0 animated:YES];
+    }
+    else
+    {
+        [bmrScale setProgress:progressbar animated:YES];
+    }
+    
     [UIView transitionWithView:bmrLabel duration:0.6 options:UIViewAnimationOptionTransitionCrossDissolve animations:NULL completion:NULL];
     bmrLabel.hidden = NO;
     bmrLabel.text = [NSString stringWithFormat:@"%g",[patient bmr]];
@@ -218,6 +268,7 @@
     bmiLabel.hidden = YES;
     bmiLabel.text = @"";
     [bmiScale setProgress:0.0 animated:YES];
+    bmiInfo.text = @"";
     
 }
 
@@ -274,25 +325,41 @@
     [genderField resignFirstResponder];
 }
 
--(UIToolbar*)createInputAccessoryView
+-(UIToolbar*)createInputAccessoryViewForTextField:(UITextField *)textField
 {
-    //UIColor* color = [UIColor colorWithRed: 0.812 green: 0.812 blue: 0.812 alpha: 1];
-    
     inputAccessoryView = [[UIView alloc]initWithFrame:CGRectMake(10.0, 0.0, 310.0, 40.0)];
     [inputAccessoryView setBackgroundColor:[UIColor lightGrayColor]];
     [inputAccessoryView setAlpha:0.8];
     
     UIBarButtonItem *prevButton = [[UIBarButtonItem alloc]
-                                   initWithImage:[UIImage imageNamed:@"/Supportin Files/UIButtonBarArrowLeft.png"]
+                                   initWithImage:[UIImage imageNamed:@"UIButtonBarArrowLeft@2x.png"]
                                    style: UIBarButtonItemStyleDone
                                    target: self
                                    action:@selector(gotoPrevTextField)];
+    if(textField == [activeArray objectAtIndex:0])
+    {
+        prevButton.enabled = NO;
+    }
+    
+    UIBarButtonItem *fixedButton = [[UIBarButtonItem alloc]
+                                    initWithBarButtonSystemItem: UIBarButtonSystemItemFixedSpace
+                                    target: self
+                                    action: nil];
+    fixedButton.width = 20.0;
+    
+    
+    
     
     UIBarButtonItem *nextButton = [[UIBarButtonItem alloc]
-                                   initWithTitle: @"Next"
+                                   initWithImage:[UIImage imageNamed:@"UIButtonBarArrowRight@2x.png"]
                                    style: UIBarButtonItemStyleDone
                                    target: self
                                    action:@selector(gotoNextTextField)];
+    if(textField == [activeArray objectAtIndex:[activeArray count]-1])
+    {
+        nextButton.enabled = NO;
+    }
+    
     
     UIBarButtonItem *flexButton = [[UIBarButtonItem alloc]
                                    initWithBarButtonSystemItem: UIBarButtonSystemItemFlexibleSpace
@@ -304,7 +371,7 @@
                                   target: self
                                   action:@selector(resignAllResponders)];
     
-    NSArray *itemsArray = @[prevButton, nextButton, flexButton, doneButton];
+    NSArray *itemsArray = @[prevButton, fixedButton, nextButton, flexButton, doneButton];
     
     UIToolbar *bar = [[UIToolbar alloc]init];
     [bar setItems: itemsArray];
@@ -364,6 +431,11 @@
         }
     }
     [self checkBoth];
+}
+
+-(IBAction)touchToDismiss:(id)sender
+{
+    [self resignAllResponders];
 }
 
 -(float)customRounding:(float)value {

@@ -24,9 +24,14 @@
     
     IBOutlet UITextField *ageField;
     IBOutlet UITextField *genderField;
+    IBOutlet UITextField *activityField;
+    IBOutlet UITextField *targetField;
     
     IBOutlet UILabel *bmiLabel;
     IBOutlet UILabel *bmrLabel;
+    
+    IBOutlet UILabel *bmiInfo;
+    IBOutlet UILabel *bmrInfo;
     
     IBOutlet UIProgressView *bmiScale;
     IBOutlet UIProgressView *bmrScale;
@@ -61,14 +66,16 @@
 -(void)clearBMI;
 -(void)clearBMR;
 
--(UIToolbar*)createInputAccessoryView;
+-(UIToolbar*)createInputAccessoryViewForTextField:(UITextField*)textField;
 
 -(void)gotoPrevTextField;
 -(void)gotoNextTextField;
+-(void)resignAllResponders;
 
 -(float)customRounding:(float)value;
 
 -(IBAction)switchUnits:(id)sender;
+-(IBAction)touchToDismiss:(id)sender;
 
 -(BOOL)containsNoEmptyTextFields:(NSArray*)textFieldArray;
 
